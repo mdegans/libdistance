@@ -32,22 +32,6 @@ add_project_arguments(
   language : 'cpp'
 )
 
-# libdistanceproto
-
-libdistanceproto_dep = dependency('distanceproto-0.3',
-  version: '0.3.1',
-  required: false,
-)
-if not libdistanceproto_dep.found()
-  cmake = import('cmake')
-  cmake_options = cmake.subproject_options()
-  cmake_options.add_cmake_defines({
-    'CMAKE_INSTALL_PREFIX': get_option('prefix')
-  })
-  distanceproto_proj = cmake.subproject('distanceproto')
-  libdistanceproto = distanceproto_proj.target('distanceproto')
-endif
-
 # include subdirs
 subdir('deepstream')
 subdir('src')
