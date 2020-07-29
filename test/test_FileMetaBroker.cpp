@@ -30,7 +30,7 @@ generate_person(dp::Person* person) {
   float danger;
   // lets assume only half the time there is danger for test purposes
   if (coin_toss()) {
-    double danger = rand() / (RAND_MAX + 1.0);
+    danger = rand() / (RAND_MAX + 1.0);
     person->set_danger_val(danger);
     person->set_is_danger(danger >= 1.0);
   }
@@ -40,7 +40,7 @@ static void
 generate_frame(dp::Frame* frame) {
   int num_people = rand() / (RAND_MAX / 10);
   float sum_danger = 0.0;
-  for (size_t i = 0; i < num_people; i++)
+  for (int i = 0; i < num_people; i++)
   {
     auto person = frame->add_people();
     generate_person(person);

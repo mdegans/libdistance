@@ -1,4 +1,4 @@
-#include "queue.hpp"
+#include "Queue.hpp"
 
 #include "gtest/gtest.h"
 
@@ -11,7 +11,7 @@ namespace {
 class QueueTest : public ::testing::Test {
 public:
 
-  Ds::Queue<std::unique_ptr<int>> queue_;
+  ds::Queue<std::unique_ptr<int>> queue_;
 
   void fill_queue() {
     for (size_t i = 0; i < 10; i++)

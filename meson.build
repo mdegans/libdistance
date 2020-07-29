@@ -8,6 +8,7 @@ project('distance', ['cpp'],
   license : 'LGPL',
   default_options: [
     'warning_level=2',  # -Wall
+    'cpp_std=c++17', # needed by some test code
   ]
 )
 
