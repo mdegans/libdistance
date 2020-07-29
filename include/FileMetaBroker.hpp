@@ -4,7 +4,7 @@
 #pragma once
 
 #include "ProtoPayloadFilter.hpp"
-#include "queue.hpp"
+#include "Queue.hpp"
 
 #include <memory>
 #include <thread>
