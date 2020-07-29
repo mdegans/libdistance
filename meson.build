@@ -35,4 +35,5 @@ add_project_arguments(
 # include subdirs
 subdir('deepstream')
 subdir('src')
+subdir('include')
 subdir('test')
